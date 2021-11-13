@@ -251,34 +251,184 @@
 // var a='@'
 // console.log(regExp.test(a))
 
-var a= 'sdfds##sdfDDF';
-a=a.toLowerCase()
+
+
+
+// --------카카카오-------------------------------
+
+// var a= 'sdfds##sdfDDF';
+// a=a.toLowerCase()
+// console.log(a)
+
+
+// var regExp = /[^a-zA-Z0-9-_.]/g;
+// var a='..aaa!s..@#%&Sdfsdlakd...fldkasdasdasdSQTR..ss9..';
+// if(a==='') return a='a';
+// a=a.replace(regExp, '').toLowerCase();
+// a=a.split('')
+// for(var i=0;i<a.length;i++){
+//     if(a[i]==='.'){
+//         if(a[i]===a[i+1]){
+//             while(a[i+1]==='.')
+//             {
+//             a.splice(i,1)
+//             }
+//         }
+//      if(i===a.length-1)
+//      {
+//         a.splice(i,1)
+//      }
+//     }
+// }
+// if(a[0]==='.') a.splice(0,1)
+// a=a.join('')
+// if(a.length>15) a=a.slice(0,16) 
+// if(a[a.length-1]==='.')
+// {while(a[a.length-1]!=='.') a.splice(a.length-1,1)
+// }
+// console.log(a) 
+///----------------------------------------------------------
+
+
+// process.stdin.setEncoding('utf8');
+// process.stdin.on('data', data => {
+//     const n = data.split(" ");
+//     const a = Number(n[0]), b = Number(n[1]);
+//     var star ='';
+//     for (var i=0; i<b; i++){
+//         for(var j=0; j<a; j++)
+//         {
+//             star += '*';
+
+//         }
+        
+//         star=''
+//     }
+    
+    
+// });
+
+// var answer=0;
+// // var a=5, b =3;
+// var gap= b-a;
+// if(a>b) gap = gap*-1
+// for(var i =0; i<=gap; i++)
+// {
+//     if(a>b) answer+= b+i;
+//     else answer+= a+i;
+// }
+// // console.log(answer) 
+// var numbers=[1,2,3,4,6,7,8,0]
+// const sum = 45;
+// var reg =/[0-9]/g
+// var result=[];
+// result= numbers.reduce((acc, curr) => acc+curr )
+// result = sum - result
+
+// console.log(result)
+// var absolutes = [1,2,4];
+// var signs = [false, false, true];
+// var result =absolutes.reduce((acc,cur,index)=>  acc+cur*(signs[index] ? 1 : -1) ,0)
+
+// console.log(result)
+
+// function getDayName(a,b){
+//     var date = new Date(2016, (a - 1), b);
+//       return date.toString()
+//   }
+  
+//   //아래 코드는 테스트를 위한 코드입니다.
+//   console.log(getDayName(5,24));
+
+// function solution(s){
+    
+//     if(s.length<=50 && s.length >0){
+//         return (s.match(/p/ig) == null && s.match(/y/ig)== null) ? 'True' : (s.match(/p/ig) == null || s.match(/y/ig)== null) ?  false : (s.match(/y/gi).length === s.match(/p/gi).length)  ? true : false ;
+//     }
+//     }
+
+//     var a = "ooo"
+
+//     // var result= a.match(/p/gi).length
+//     console.log(solution(a))
+
+    // function solution(s){
+    //     //함수를 완성하세요
+    //       return s.toUpperCase().split("P").length === s.toUpperCase().split("Y").length;
+    //   }
+
+    //   console.log(solution("oooyY"))
+
+    // function solution(s){
+  
+    //     let b= s.split(' ');
+    //     console.log(b)
+    //     var c= '';
+    //    for(var i =0; i<b.length; i++){
+    //        for(var j=0; j<b[i].length; j++)
+    //        {
+    //            if(j%2==0){
+    //          c += b[i][j].toUpperCase();
+    //          console.log(c)
+    //        } else {
+    //            c+= b[i][j].toLowerCase();
+    //        }
+           
+    //        }
+    //        if(i<b.length-1){
+    //        c+=' '
+    //        }
+    //    }
+    //     return c
+    //    }
+       
+    //    solution("try hello world")
+
+    // function solution(n) {
+   
+    //     return n.toString().split('').reverse();
+    // }
+
+
+    // var n = 12345
+
+    // console.log(solution(n))
+
+
+    // function solution(n){
+    //     var a;
+    //     var sum=0;
+    //     a= n.toString().split('').reverse()
+    //     // console.log(a)
+    //     sum= a.reduce((acc,cur) => parseInt(acc)+parseInt(cur),0)+'';
+    //     // console.log(sum)
+    //     // a=a.join('')
+    //     // console.log(a)
+    //     a=a.reduce((acc,cur)=> acc+'+'+cur)
+    //     // a=a[0]+'+'+a[1]
+    //     // console.log(a)
+    // //    console.log(typeof (a+'='+sum))
+       
+      
+    //    return a+'='+sum
+    //   }
+      
+    //  console.log(typeof solution(12345))
+
+/////항해99 알고리즘 문제 -------------------------------------------------
+    // function solution(n){
+    //     var a= n.toString().split('').reverse();
+    //     var sum= a.reduce((acc,cur) => parseInt(acc)+parseInt(cur))+'';
+    //     a=a.reduce((acc,cur)=> `${acc}+${cur}`);
+    //    return a+'='+sum;
+    //   }
+    //   solution(718253);
+
+//--------------------------------------------------------------------------------
+
+
+var reg= /(\d{1,3}\.){3}\d{1,3}/g   // == /(\d{1,3}.){3}\d{1,3}/g 와 같은말
+
+var a=['1.1.2.3'];
+a=a.filter((value, index) => reg.test(a)===true );
 console.log(a)
-
-
-var regExp = /[^a-zA-Z0-9-_.]/g;
-var a='..aaa!s..@#%&Sdfsdlakd...fldkasdasdasdSQTR..ss9..';
-if(a==='') return a='a';
-a=a.replace(regExp, '').toLowerCase();
-a=a.split('')
-for(var i=0;i<a.length;i++){
-    if(a[i]==='.'){
-        if(a[i]===a[i+1]){
-            while(a[i+1]==='.')
-            {
-            a.splice(i,1)
-            }
-        }
-     if(i===a.length-1)
-     {
-        a.splice(i,1)
-     }
-    }
-}
-if(a[0]==='.') a.splice(0,1)
-a=a.join('')
-if(a.length>15) a=a.slice(0,16) 
-if(a[a.length-1]==='.')
-{while(a[a.length-1]!=='.') a.splice(a.length-1,1)
-}
-console.log(a) 

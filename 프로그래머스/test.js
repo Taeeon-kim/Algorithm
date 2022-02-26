@@ -427,8 +427,86 @@
 //--------------------------------------------------------------------------------
 
 
-var reg= /(\d{1,3}\.){3}\d{1,3}/g   // == /(\d{1,3}.){3}\d{1,3}/g 와 같은말
+// var reg= /(\d{1,3}\.){3}\d{1,3}/g   // == /(\d{1,3}.){3}\d{1,3}/g 와 같은말
 
-var a=['1.1.2.3'];
-a=a.filter((value, index) => reg.test(a)===true );
-console.log(a)
+// var a=['1.1.2.3'];
+// a=a.filter((value, index) => reg.test(a)===true );
+// console.log(a)
+
+// function solution(phone_number){
+//     var star=''
+   
+//        star='*'.repeat(phone_number.length-4)
+//   console.log(star)
+//     return console.log(star+phone_number.slice(-4))
+// }
+
+// solution(`01020556431`)
+
+// 코테 1번문제
+// function solution(n) {
+//     let str = n+'';
+//     let str2;
+//     let check;
+//     let sub=[]
+//     for(let i=1; i<10;i++){
+//         str2=i+'';
+//     check=str.indexOf(str2)
+//     if(check!==-1){
+//         sub.push(i)
+//     }
+//     }
+//  let answer=sub.filter((i)=> n%i===0)
+//     return answer.length;
+// }
+
+//     console.log(solution(1234))
+
+
+    //코테 2번문제
+    // function solution(s) {
+    //     let count=0;
+    //     for(let i=0;i<s.length;i++){
+    //         if(i%2===0){
+    //             if(s[i]>s[i+1]||s[i]===s[i+1]){
+    //                 s.splice(i+1,0,s[i]+1)
+    //                 console.log(s);
+    //                 count++
+    //             }
+    //         }
+    //         else{
+    //             if(s[i]<s[i+1]||s[i]===s[i+1]){
+    //                 s.splice(i+1,0,s[i]-1)
+    //                 count++
+    //             }   
+    //         }
+    //     }
+    //     return count;
+    // }
+    // console.log(solution([2,1,3,20,2,2,2]))
+
+
+
+    //3번문제 실패, 아직 다못함
+
+    // function solution(board, c) {
+    //     let totalX=board[0].length
+    //     let totalY=board.length
+    //     let start;
+    //     let a= board
+    //     console.log(a)
+    //     for(let i=0; i<totalX; i++){
+    //         // console.log(board[i].indexOf(2))
+    //         for(let j=0; j<totalY;j++){
+    //             if((a[i][j].indexOf(2))!==-1){
+    //                 console.log(i)
+    //             }
+    //         }
+            
+            
+    //     }
+    //     var answer = 0;
+    //     return answer;
+    // }
+    
+    // solution([[0,0,2,0],[0,1,0,0],[0,3,0,0]],2)

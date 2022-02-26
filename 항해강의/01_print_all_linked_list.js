@@ -28,7 +28,6 @@ class LinkedList {
       cur = cur.next;
     }
     cur.next = new Node(data);
-    
   }
 }
 // const test= new LinkedList();

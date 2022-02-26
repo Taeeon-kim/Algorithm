@@ -63,18 +63,21 @@ class LinkedList {
 }
 
 function linked_list_sum(linked_list_1, linked_list_2){
-let sum_1 = 0, sum_2=0;
-let head_1 = linked_list.head, head_2 = linked_list2.head;
-while(head_1){
-sum_1 = sum_1*10 + head_1.data 
- head_1=head_1.next
-}
-while(head_2){
-  sum_2=sum_2*10+head_2.data
-  head_2=head_2.next
-}
+  const sum_1=linked_list_sum_func(linked_list_1)
+  const sum_2=linked_list_sum_func(linked_list_2)
 return sum_1+sum_2
 }
+
+function linked_list_sum_func(linked_list){
+  let sum = 0
+  let head = linked_list.head
+  while(head){
+  sum = sum*10 + head.data 
+   head=head.next
+  }
+  return sum
+}
+
 // const test= new LinkedList();
 // console.log(test.append(3))
 const linked_list = new LinkedList(5);

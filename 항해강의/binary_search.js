@@ -45,4 +45,4 @@ while(current_min<=current_max){
 }
 
 console.log(target_number_binary(target, array_numbers))
-console.log(target_number_binary(target2, array_random)) // 랜덤으로 배열 값이 지정되었다면 이진탐색을 할수가없다.
+// console.log(target_number_binary(target2, array_random)) // 랜덤으로 배열 값이 지정되었다면 이진탐색을 할수가없다.

@@ -1,4 +1,2 @@
-if(board[i].indexOf('2')!==-1){
-                console.log(i)
-            }
-            
+
+                // console.log("mutual",mutual_friends)

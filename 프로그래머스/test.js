@@ -531,47 +531,50 @@
 //  [1,1,0,0]]
 
 //3번째 문제
-function solution(friends, user_id) {
-  const user_friends = [];
-  let mutual_friends = [];
-  for (let i = 0; i < friends.length; i++) {
-    if (friends[i][0] === user_id) {
-      user_friends.push(friends[i][1]);
-    }
-    if (friends[i][1] === user_id) {
-      user_friends.push(friends[i][0]);
-    }
-  }
-  for (let j = 0; j < user_friends.length; j++) {
-    let friend_name = user_friends[j];
-    for (let k = 0; k < friends.length; k++) {
-      if (friends[k][0] === friend_name && friends[k][1] !== user_id) {
-        mutual_friends.push(friends[k][1]);
-      }
-      if (friends[k][1] === friend_name && friends[k][0] !== user_id) {
-        mutual_friends.push(friends[k][0]);
-      }
-    }
-  }
-  const best = mutual_friends.reduce((pv, cv) => {
-      console.log(pv)
-    pv[cv] = (pv[cv] || 0) + 1;
-    return pv;
-  }, {});
-  let max = 0;
-  let best_friend = "";
-  for (key in best) {
-    if (best[key] > max ||best[key]===max&& max!==0) {
-      max = best[key];
-      best_friend = [...best_friend, key];
-    }
-  }
-  return best_friend;
-}
+// function solution(friends, user_id) {
+//   const user_friends = [];
+//   let mutual_friends = [];
+//   for (let i = 0; i < friends.length; i++) {
+//     if (friends[i][0] === user_id) {
+//       user_friends.push(friends[i][1]);
+//     }
+//     if (friends[i][1] === user_id) {
+//       user_friends.push(friends[i][0]);
+//     }
+//   }
+//   for (let j = 0; j < user_friends.length; j++) {
+//     let friend_name = user_friends[j];
+//     for (let k = 0; k < friends.length; k++) {
+//       if (friends[k][0] === friend_name && friends[k][1] !== user_id) {
+//         mutual_friends.push(friends[k][1]);
+//       }
+//       if (friends[k][1] === friend_name && friends[k][0] !== user_id) {
+//         mutual_friends.push(friends[k][0]);
+//       }
+//     }
+//   }
+//   const best = mutual_friends.reduce((pv, cv) => {
+//       console.log(pv)
+//     pv[cv] = (pv[cv] || 0) + 1;
+//     return pv;
+//   }, {});
+//   let max = 0;
+//   let best_friend = "";
+//   for (key in best) {
+//     if (best[key] > max ||best[key]===max&& max!==0) {
+//       max = best[key];
+//       best_friend = [...best_friend, key];
+//     }
+//   }
+//   return best_friend;
+// }
 
-console.log(
-  solution(
-    [["david","demi"], ["frank", "demi"], ["demi", "james"]],
-    "frank"
-  )
-);
+// console.log(
+//   solution(
+//     [["david","demi"], ["frank", "demi"], ["demi", "james"]],
+//     "frank"
+//   )
+// );
+
+let a = [["a","b"],["c","d"]]
+console.log(a[0][1])

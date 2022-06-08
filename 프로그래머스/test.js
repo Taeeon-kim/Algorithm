@@ -576,5 +576,150 @@
 //   )
 // );
 
-let a = [["a","b"],["c","d"]]
-console.log(a[0][1])
+// let a = [["a","b"],["c","d"]]
+// console.log(a[0][1])
+
+// function solution(path) {
+//   let time = 0;
+//   let count = 0;
+//   const arr = [...path];
+//   let answer = [];
+
+//   for (i = 0; i < arr.length; i++) {
+//     if (arr[i] === arr[i + 1]) {
+//       count++;
+//     } else {
+//       if (count < 5) {
+//         if (
+//           (arr[i] === "E" && arr[i + 1] === "S") ||
+//           (arr[i] === "S" && arr[i + 1] === "W") ||
+//           (arr[i] === "N" && arr[i + 1] === "E") ||
+//           (arr[i] === "W" && arr[i + 1] === "N")
+//         ) {
+//           answer.push(
+//             `Time ${time}: Go straight ${(count + 1) * 100}m and turn right`
+//           );
+//           time = time + count + 1;
+//           count = 0;
+//         } else if (
+//           (arr[i] === "E" && arr[i + 1] === "N") ||
+//           (arr[i] === "S" && arr[i + 1] === "E") ||
+//           (arr[i] === "N" && arr[i + 1] === "W") ||
+//           (arr[i] === "W" && arr[i + 1] === "S")
+//         ) {
+//           answer.push(
+//             `Time ${time}: Go straight ${(count + 1) * 100}m and turn left`
+//           );
+//           time = time + count + 1;
+//           count = 0;
+//         }
+//       } else {
+//         if (
+//           (arr[i] === "E" && arr[i + 1] === "S") ||
+//           (arr[i] === "S" && arr[i + 1] === "W") ||
+//           (arr[i] === "N" && arr[i + 1] === "E") ||
+//           (arr[i] === "W" && arr[i + 1] === "N")
+//         ) {
+//           time = time + count - 4;
+//           answer.push(
+//             `Time ${time}: Go straight ${count * 100}m and turn right`
+//           );
+//           time = time + count;
+//           count = 0;
+//         } else if (
+//           (arr[i] === "E" && arr[i + 1] === "N") ||
+//           (arr[i] === "S" && arr[i + 1] === "E") ||
+//           (arr[i] === "N" && arr[i + 1] === "W") ||
+//           (arr[i] === "W" && arr[i + 1] === "S")
+//         ) {
+//           time = time + count - 4;
+//           answer.push(
+//             `Time ${time}: Go straight ${count * 100}m and turn left`
+//           );
+//           time = time + count;
+//           count = 0;
+//         }
+//       }
+//     }
+//   }
+
+//   return answer;
+// }
+
+// console.log(solution("SSSSSSWWWNNNNNN"));
+// let template;
+// let state ;
+// function solution(tstring, variables){
+//      template= variables[0][1];
+//      state = variables[1][1];
+
+//     console.log(tstring);
+//     let answer = '';
+//     return answer;
+// }
+
+// solution(`this is ${template} ${template} is ${state}`, [["template", "string"],["state","changed"]])
+
+// 깊은복사 연습
+// var copyObject = function(target){
+//     var result ={};
+//     if(typeof target==='object'&& target!==null){
+//         // console.log(target)
+//         for(var prop in target){
+//             result[prop] = copyObject(target[prop]);
+//             // console.log(prop,"here")
+//         }
+//     }
+//     else{
+//         result = target;
+//         // console.log(result)
+//     }
+//     return result;
+// }
+
+// var user = {
+//     name: 'Jaenam',
+//     urls: {
+//         portfolio:'http://github.com/abc',
+//         blog:'http://blog.com',
+//         facebook:'http://facebook.com/abc'
+//     }
+// }
+// var user2= copyObject(user);
+// user2.name='Jung';
+// console.log(user.name, user2.name)
+// user2.urls = copyObject(user.urls)
+// user.urls.portfolio='http://portfolio.com';
+// console.log(user.urls.portfolio, user2.urls.portfolio)
+// console.log(typeof null)
+// user2.urls.blog=':)';
+// console.log(user.urls.blog, user2.urls.blog)
+
+//깊은복사2 stringify
+
+var copyObjectViaJSON = function (target) {
+  return JSON.parse(JSON.stringify(target));
+};
+
+var obj = {
+  a: 1,
+  b: {
+    c: null,
+    d: [1, 2],
+    func1: function () {
+      console.log(3);
+    },
+  },
+  func2: function () {
+    console.log(4);
+  },
+};
+
+var obj2 = copyObjectViaJSON(obj);
+
+obj2.a=3;
+obj2.b.c=4;
+obj.b.d[1] = 3;
+
+console.log(obj.func2);
+console.log(obj2.func2)

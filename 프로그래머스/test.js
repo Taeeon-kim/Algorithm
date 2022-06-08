@@ -686,40 +686,40 @@
 //     }
 // }
 // var user2= copyObject(user);
-// user2.name='Jung';
-// console.log(user.name, user2.name)
-// user2.urls = copyObject(user.urls)
+// // user2.name='Jung';
+// // console.log(user.name, user2.name)
+// // user2.urls = copyObject(user.urls)
 // user.urls.portfolio='http://portfolio.com';
 // console.log(user.urls.portfolio, user2.urls.portfolio)
-// console.log(typeof null)
-// user2.urls.blog=':)';
-// console.log(user.urls.blog, user2.urls.blog)
+// // console.log(typeof null)
+// // user2.urls.blog=':)';
+// // console.log(user.urls.blog, user2.urls.blog)
 
-//깊은복사2 stringify
+// //깊은복사2 stringify
 
-var copyObjectViaJSON = function (target) {
-  return JSON.parse(JSON.stringify(target));
-};
+// var copyObjectViaJSON = function (target) {
+//   return JSON.parse(JSON.stringify(target));
+// };
 
-var obj = {
-  a: 1,
-  b: {
-    c: null,
-    d: [1, 2],
-    func1: function () {
-      console.log(3);
-    },
-  },
-  func2: function () {
-    console.log(4);
-  },
-};
+// var obj = {
+//   a: 1,
+//   b: {
+//     c: null,
+//     d: [1, 2],
+//     func1: function () {
+//       console.log(3);
+//     },
+//   },
+//   func2: function () {
+//     console.log(4);
+//   },
+// };
 
-var obj2 = copyObjectViaJSON(obj);
+// var obj2 = copyObjectViaJSON(obj);
 
-obj2.a=3;
-obj2.b.c=4;
-obj.b.d[1] = 3;
+// obj2.a=3;
+// obj2.b.c=4;
+// obj.b.d[1] = 3;
 
-console.log(obj.func2);
-console.log(obj2.func2)
+// console.log(obj.func2);
+// console.log(obj2.func2)

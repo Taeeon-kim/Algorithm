@@ -1,4 +1,4 @@
-function mergeSort(arr1, arr2) {
+function merge(arr1, arr2) {
   const results = [];
   let i = 0;
   let j = 0;
@@ -21,4 +21,13 @@ function mergeSort(arr1, arr2) {
   }
   return results;
 }
-console.log(mergeSort([1, 4, 10], [2, 5, 40, 45, 50]));
+function mergeSort(arr) {
+  if (arr.length <= 1) return arr; // base case;
+  // recursive case below
+  let midpoint = Math.floor(arr.length / 2);
+  let leftArray = mergeSort(arr.slice(0, midpoint));
+  let rightArray = mergeSort(arr.slice(midpoint));
+  return merge(leftArray, rightArray);
+}
+
+console.log(mergeSort([5, 1, 74, 30, 76, 70]));

@@ -24,14 +24,18 @@ class Student {
     let sum = this.scores.reduce((a, b) => a + b);
     return sum / this.scores.length;
   }
+  static EnrollStudents() {
+    return "ENROLLING STUDENTS!";
+  }
 }
 
 const firstStudent = new Student("Emil", "Katz", 3);
 const secondStudent = new Student("Blue", "Steele", 3);
-secondStudent.markLate();
-secondStudent.markLate();
-console.log(secondStudent.markLate());
-console.log(secondStudent.addScore(93));
-console.log(secondStudent.addScore(82));
-console.log(secondStudent);
-console.log(secondStudent.calculateAverage());
+console.log(Student.EnrollStudents());
+// secondStudent.markLate();
+// secondStudent.markLate();
+// console.log(secondStudent.markLate());
+// console.log(secondStudent.addScore(93));
+// console.log(secondStudent.addScore(82));
+// console.log(secondStudent);
+// console.log(secondStudent.calculateAverage());
